@@ -1,0 +1,11 @@
+[
+    {
+        "name": "cvsc",
+        "description": "Create & Open New VSCode Directory",
+        "icon": null,
+        "script": "mkdir ",
+        "default_arguments": [
+            "~/.config/ulauncher/scripts.json"
+        ]
+    }
+]

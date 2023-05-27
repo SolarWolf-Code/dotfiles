@@ -4,7 +4,7 @@
 
 ## How to start
 Start by clone this repo:
-`git clone https://github.com/SolarWolf-Code/dotfiles/tree/main`
+`git clone https://github.com/SolarWolf-Code/dotfiles`
 
 Move files to ~/.config and run the setup script
 ```

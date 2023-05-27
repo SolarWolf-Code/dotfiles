@@ -1,5 +1,6 @@
 alacritty
 rofi
+discord
 boomer-git
 catppuccin-gtk-theme-frappe
 catppuccin-gtk-theme-latte

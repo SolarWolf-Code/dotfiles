@@ -9,7 +9,7 @@ Start by clone this repo:
 Move files to ~/.config and run the setup script
 ```
 mkdir -p ~/.config
-rm -r ~/.config/i3
+rm -d -r ~/.config/i3
 mv dotfiles/* ~/.config
 chmod +x ~/.config/setup.sh
 cd ~/.config

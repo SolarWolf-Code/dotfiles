@@ -17,4 +17,4 @@ cd yay
 makepkg -si
 
 cd
-yay -S --noconfirm - < packages.txt
+yay -S --noconfirm - < ~/.config/packages.txt

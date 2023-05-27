@@ -10,6 +10,8 @@ Move files to ~/.config and run the setup script
 ```
 mkdir -p ~/.config
 rm -rf ~/.config/i3
+cd dotfiles
+shopt -s dotglob
 mv dotfiles/* ~/.config
 chmod +x ~/.config/setup.sh
 cd ~/.config

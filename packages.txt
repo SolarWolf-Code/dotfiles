@@ -38,3 +38,8 @@ bluez-utils
 lxappearance
 starship
 ttf-firacode-nerd
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+rust
+notification-daemon

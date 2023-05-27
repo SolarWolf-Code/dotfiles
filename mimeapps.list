@@ -1,0 +1,14 @@
+
+[Default Applications]
+text/html=librewolf.desktop
+x-scheme-handler/http=librewolf.desktop
+x-scheme-handler/https=librewolf.desktop
+x-scheme-handler/about=librewolf.desktop
+x-scheme-handler/unknown=librewolf.desktop
+x-scheme-handler/ror2mm=r2modman.desktop
+image/jpeg=qview.desktop
+image/png=qview.desktop
+image/jpg=qview.desktop
+video/mp4=vlc.desktop
+video/mkv=vlc.desktop
+video/x-matroska=vlc.desktop

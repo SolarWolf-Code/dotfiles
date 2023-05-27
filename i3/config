@@ -239,7 +239,7 @@ gaps inner 10
 
 
 # Desktop Wallpaper
-exec feh --bg-fill $HOME/Downloads/steamuserimages-a.akamaihd.jpg
+exec feh --bg-fill $HOME/.config/steamuserimages-a.akamaihd.jpg
 
 # Steam -> allows for games to update in background
 exec steam -silent

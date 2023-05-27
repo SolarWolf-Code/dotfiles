@@ -23,9 +23,6 @@ alias wifi="bash /home/wolf/Desktop/wifimenu.txt"
 source github_token
 alias gc='function _gc(){ url=$(echo $1 | sed "s/https:\/\///"); git clone "https://$GITHUB_TOKEN@$url"; };_gc'
 
-# Rust moment
-. "$HOME/.cargo/env"
-
 # alias for micro (better nano)
 alias mc="micro"
 nano() {

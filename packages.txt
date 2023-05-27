@@ -1,4 +1,5 @@
 alacritty
+rofi
 boomer-git
 catppuccin-gtk-theme-frappe
 catppuccin-gtk-theme-latte
@@ -17,8 +18,6 @@ qview
 r2modman-bin
 rustdesk-bin
 simplescreenrecorder
-surfshark-client
-zoom
 steam
 spotify-launcher
 libreoffice-still
@@ -43,3 +42,5 @@ noto-fonts-cjk
 noto-fonts-emoji
 rust
 notification-daemon
+openvpn
+magic-wormhole

@@ -10,6 +10,11 @@ sudo mv ~/.config/us-slc.prod.surfshark.com_udp.ovpn /etc/openvpn/
 
 # install yay then the rest of the packages
 cd
-sudo pacman -S yay
 
+sudo pacman -S base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+cd
 yay -S --noconfirm - < packages.txt

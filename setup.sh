@@ -22,3 +22,6 @@ makepkg -si
 
 cd
 yay -S --noconfirm - < ~/.config/packages.txt
+
+cd
+rm -r ~/dotfiles

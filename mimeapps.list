@@ -10,5 +10,4 @@ image/jpeg=qview.desktop
 image/png=qview.desktop
 image/jpg=qview.desktop
 video/mp4=vlc.desktop
-video/mkv=vlc.desktop
 video/x-matroska=vlc.desktop

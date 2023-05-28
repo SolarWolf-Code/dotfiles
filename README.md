@@ -1,7 +1,10 @@
 # dotfiles
 
 ## Fresh Install
-Start by clone this repo:
+Install git from pacman
+`sudo pacman -S git`
+
+Clone this repo:
 `git clone https://github.com/SolarWolf-Code/dotfiles.git`
 
 ### Move files to ~/.config and run the setup script

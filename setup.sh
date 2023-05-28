@@ -12,16 +12,16 @@ mv ~/.config/.bashrc ~/.bashrc
 cd
 sudo mv ~/.config/us-slc.prod.surfshark.com_udp.ovpn /etc/openvpn/
 
-# install yay then the rest of the packages
+# install yay
 cd
-
 sudo pacman -S base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+# install packages from package list
 cd
 yay -S --noconfirm - < ~/.config/packages.txt
 
-cd
-rm -r ~/dotfiles
+# refresh i3
+i3-msg restart

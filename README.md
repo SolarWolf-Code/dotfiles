@@ -9,7 +9,7 @@ Clone this repo:
 
 ### Run the setup script
 ```
-chmod +x ~/.config/setup.sh && ~/.config/.setup.sh
+~/dotfiles/setup.sh
 ```
 
 ### Setting up Github token

@@ -10,7 +10,11 @@ mkdir -p ~/.config
 rm -rf ~/.config/i3
 cd dotfiles
 shopt -s dotglob
-mv * ~/.config
+for file in *; do
+  if [[ "$file" != ".git" ]]; then
+    ln -s "$(pwd)/$file" ~/.config/"$file"
+  fi
+done
 chmod +x ~/.config/setup.sh
 cd ~/.config
 ./setup.sh

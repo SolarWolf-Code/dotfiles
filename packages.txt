@@ -46,3 +46,4 @@ rust
 notification-daemon
 openvpn
 magic-wormhole
+mlocate

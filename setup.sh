@@ -4,7 +4,7 @@ rm -rf ~/.config/i3
 cd dotfiles
 shopt -s dotglob
 for file in *; do
-  if [[ "$file" == ".git" || "$file" == "README.md" || "$file" == "setup.sh" ]]; then
+  if [[ "$file" == ".git" || "$file" == "README.md" || "$file" == "setup.sh" || "$file" == ".gtkrc-2.0"]]; then
     continue
   fi
   ln -s "$(pwd)/$file" ~/.config/"$file"
@@ -34,6 +34,12 @@ makepkg -si
 # install packages from package list
 cd
 yay -S --noconfirm - < ~/.config/packages.txt
+
+# update mlocate db
+sudo updatedb
+
+# symlink GTK theme to home dir
+ln -s "~/dotfiles/.gtkrc-2.0" ~/
 
 # refresh i3
 i3-msg restart

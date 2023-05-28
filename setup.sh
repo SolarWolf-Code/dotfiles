@@ -41,5 +41,8 @@ sudo updatedb
 # symlink GTK theme to home dir
 ln -s "~/dotfiles/.gtkrc-2.0" ~/
 
+# mask xdg-desktop-portal - otherwise browser takes forever to open
+systemctl --user mask xdg-desktop-portal
+
 # refresh i3
 i3-msg restart

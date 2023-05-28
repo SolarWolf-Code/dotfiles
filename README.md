@@ -17,8 +17,6 @@ Obtain GH token from the website and put in this file
 `
 cd && touch github_token
 `
-### GTK theme
-Run lxappearance and choose Catppuccin-Mocha-Standard-Blue-Dark
 
 ### Create file for vpn credentials
 Obtain Surfshark token from the website and put in this file

@@ -7,21 +7,11 @@ Install git from pacman
 Clone this repo:
 `git clone https://github.com/SolarWolf-Code/dotfiles.git`
 
-### Move files to ~/.config and run the setup script
+### Run the setup script
 ```
-mkdir -p ~/.config
-rm -rf ~/.config/i3
-cd dotfiles
-shopt -s dotglob
-for file in *; do
-  if [[ "$file" != ".git" ]]; then
-    ln -s "$(pwd)/$file" ~/.config/"$file"
-  fi
-done
-chmod +x ~/.config/setup.sh
-cd ~/.config
-./setup.sh
+chmod +x ~/.config/setup.sh && ~/.config/.setup.sh
 ```
+
 ### Setting up Github token
 Obtain GH token from the website and put in this file
 `

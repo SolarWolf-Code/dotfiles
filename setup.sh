@@ -1,3 +1,20 @@
+# symlinking dotfiles
+mkdir -p ~/.config
+rm -rf ~/.config/i3
+cd dotfiles
+shopt -s dotglob
+for file in *; do
+  if [[ "$file" != ".git" ]]; then
+  	if [[ "$file" != "README.md" ]]; then
+	    ln -s "$(pwd)/$file" ~/.config/"$file"
+ 	fi
+  fi
+done
+# chmod +x ~/.config/setup.sh
+# cd ~/.config
+# ./setup.sh
+
+
 # adding ble.sh (autocomplete in bash)
 cd 
 git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git

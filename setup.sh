@@ -4,16 +4,11 @@ rm -rf ~/.config/i3
 cd dotfiles
 shopt -s dotglob
 for file in *; do
-  if [[ "$file" != ".git" ]]; then
-  	if [[ "$file" != "README.md" ]]; then
-	    ln -s "$(pwd)/$file" ~/.config/"$file"
- 	fi
+  if [[ "$file" == ".git" || "$file" == "README.md" || "$file" == "setup.sh" ]]; then
+    continue
   fi
+  ln -s "$(pwd)/$file" ~/.config/"$file"
 done
-# chmod +x ~/.config/setup.sh
-# cd ~/.config
-# ./setup.sh
-
 
 # adding ble.sh (autocomplete in bash)
 cd 

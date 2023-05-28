@@ -4,7 +4,7 @@ rm -rf ~/.config/i3
 cd dotfiles
 shopt -s dotglob
 for file in *; do
-  if [[ "$file" == ".git" || "$file" == "README.md" || "$file" == "setup.sh" || "$file" == ".gtkrc-2.0"]]; then
+  if [[ "$file" == ".git" || "$file" == "README.md" || "$file" == "setup.sh" || "$file" == ".gtkrc-2.0" ]]; then
     continue
   fi
   ln -s "$(pwd)/$file" ~/.config/"$file"

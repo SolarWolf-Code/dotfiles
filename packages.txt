@@ -36,7 +36,6 @@ playerctl
 blueberry
 bluez
 bluez-utils
-lxappearance
 starship
 ttf-firacode-nerd
 noto-fonts

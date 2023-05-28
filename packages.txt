@@ -46,3 +46,4 @@ notification-daemon
 openvpn
 magic-wormhole
 mlocate
+xdg-desktop-portal

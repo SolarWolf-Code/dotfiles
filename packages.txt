@@ -19,7 +19,6 @@ picom-ibhagwan-git
 qview
 r2modman-bin
 rustdesk-bin
-simplescreenrecorder
 steam
 spotify-launcher
 libreoffice-still
@@ -48,3 +47,4 @@ magic-wormhole
 mlocate
 lightdm-webkit2-greeter
 pavucontrol
+obs-studio

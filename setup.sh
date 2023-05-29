@@ -55,8 +55,6 @@ sudo sed -i "s|^\(Exec=.*\)$|\1 --no-sandbox|" "/usr/share/applications/r2modman
 sudo cp -r ~/dotfiles/lightdm-evo /usr/share/lightdm-webkit/themes/lightdm-evo
 sudo cp ~/dotfiles/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp ~/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
-# sudo sed -i 's/^\(webkit_theme\s*=\s*\)[^#]*$/\1lightdm-evo/' /etc/lightdm/lightdm-webkit2-greeter.conf
-# sudo sed -i '/^\[Seat:\*\]$/,/^$/ s/^#\?greeter-session\s*=\s*.*$/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 
 # changing user avatar
 sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/wolf
@@ -64,16 +62,3 @@ sudo chmod 644 /var/lib/AccountsService/icons/wolf
 touch /var/lib/AccountsService/users/wolf
 sudo cp ~/dotfiles/ASwolf /var/lib/AccountsService/users/wolf
 reboot
-
-# # refresh i3
-# i3-msg restart
-# 
-# # rebooting to change everything
-# read -p "Would you like to reboot for changes to take effect? (Y/N): " answer
-# 
-# if [[ $answer =~ ^[Yy]$ ]] || [[ -z $answer ]]; then
-  # echo "Rebooting..."
-  # reboot
-# else
-  # echo "Skipping reboot..."
-# fi

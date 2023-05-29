@@ -52,8 +52,10 @@ sudo systemctl start bluetooth.service
 sudo sed -i "s|^\(Exec=.*\)$|\1 --no-sandbox|" "/usr/share/applications/r2modman.desktop"
 
 # setting up pretty greeter
-sudo sed -i 's/^webkit_theme\s*=\s*\(.*\)/webkit_theme = lightdm-evo #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
-sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
+sudo cp -r ~/dotfiles/lightdm-evo /usr/share/lightdm-webkit/themes/lightdm-evo
+sudo sed -i 's/^\(webkit_theme\s*=\s*\)[^#]*$/\1new_theme/' /etc/lightdm/lightdm-webkit2-greeter.conf
+sudo sed -i '/^\[Seat:\*\]$/,/^$/ s/^#\?greeter-session\s*=\s*.*$/greeter-session=lightdm-webkit2-greeter #/' /etc/lightdm/lightdm.conf
+
 
 # refresh i3
 i3-msg restart

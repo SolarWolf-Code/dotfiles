@@ -57,3 +57,13 @@ sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-web
 
 # refresh i3
 i3-msg restart
+
+# rebooting to change everything
+read -p "Would you like to reboot for changes to take effect? (Y/N): " answer
+
+if [[ $answer =~ ^[Yy]$ ]] || [[ -z $answer ]]; then
+  echo "Rebooting..."
+  reboot
+else
+  echo "Skipping reboot..."
+fi

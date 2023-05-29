@@ -53,15 +53,17 @@ sudo sed -i "s|^\(Exec=.*\)$|\1 --no-sandbox|" "/usr/share/applications/r2modman
 
 # setting up pretty greeter
 sudo cp -r ~/dotfiles/lightdm-evo /usr/share/lightdm-webkit/themes/lightdm-evo
-sudo sed -i 's/^\(webkit_theme\s*=\s*\)[^#]*$/\1lightdm-evo/' /etc/lightdm/lightdm-webkit2-greeter.conf
-sudo sed -i '/^\[Seat:\*\]$/,/^$/ s/^#\?greeter-session\s*=\s*.*$/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
+sudo cp ~/dotfiles/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
+sudo cp ~/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
+# sudo sed -i 's/^\(webkit_theme\s*=\s*\)[^#]*$/\1lightdm-evo/' /etc/lightdm/lightdm-webkit2-greeter.conf
+# sudo sed -i '/^\[Seat:\*\]$/,/^$/ s/^#\?greeter-session\s*=\s*.*$/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 
 # changing user avatar
-echo "Icon=/var/lib/AccountsService/icons/wolf" | sudo tee -a /var/lib/AccountsService/users/wolf
 sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/wolf
 sudo chmod 644 /var/lib/AccountsService/icons/wolf
-sudo systemctl restart lightdm
-
+touch /var/lib/AccountsService/users/wolf
+sudo cp ~/dotfiles/ASwolf /var/lib/AccountsService/users/wolf
+reboot
 
 # # refresh i3
 # i3-msg restart

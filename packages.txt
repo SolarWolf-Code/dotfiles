@@ -46,3 +46,4 @@ mlocate
 lightdm-webkit2-greeter
 pavucontrol
 obs-studio
+virt-manager

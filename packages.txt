@@ -47,3 +47,5 @@ openvpn
 magic-wormhole
 mlocate
 lightdm-webkit2-greeter
+sudo systemctl restart lightdm
+pavucontrol

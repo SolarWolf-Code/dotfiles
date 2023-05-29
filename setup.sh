@@ -57,8 +57,9 @@ sudo sed -i 's/^\(webkit_theme\s*=\s*\)[^#]*$/\1lightdm-evo/' /etc/lightdm/light
 sudo sed -i '/^\[Seat:\*\]$/,/^$/ s/^#\?greeter-session\s*=\s*.*$/greeter-session=lightdm-webkit2-greeter/' /etc/lightdm/lightdm.conf
 
 # changing user avatar
-sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsServices/wolf
-sudo chmod 644 /var/lib/AccountsServices/wolf
+echo "Icon=/var/lib/AccountsService/icons/wolf" | sudo tee -a /var/lib/AccountsService/users/wolf
+sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/wolf
+sudo chmod 644 /var/lib/AccountsService/icons/wolf
 sudo systemctl restart lightdm
 
 

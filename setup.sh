@@ -49,7 +49,7 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 
 # r2modman: add --no-sandbox flag to work
-sed -i "s|^\(Exec=.*\)$|\1 --no-sandbox|" "/usr/share/applications/r2modman.desktop"
+sudo sed -i "s|^\(Exec=.*\)$|\1 --no-sandbox|" "/usr/share/applications/r2modman.desktop"
 
 # refresh i3
 i3-msg restart

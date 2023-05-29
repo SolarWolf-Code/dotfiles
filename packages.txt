@@ -17,7 +17,6 @@ librewolf-bin
 lutris-git
 picom-ibhagwan-git
 qview
-r2modman-bin
 rustdesk-bin
 steam
 spotify-launcher
@@ -40,7 +39,6 @@ ttf-firacode-nerd
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
-rust
 notification-daemon
 openvpn
 magic-wormhole

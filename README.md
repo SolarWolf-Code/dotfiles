@@ -15,19 +15,11 @@ Clone this repo:
 ### Setting up Github token
 Obtain GH token from the website and put in this file
 `
-cd && touch github_token
+cd && mc github_token
 `
 
 ### Create file for vpn credentials
 Obtain Surfshark token from the website and put in this file
 `
-cd && mkdir ovpn && touch ~/ovpn/credentials.txt
+cd && mkdir ovpn && mc ~/ovpn/credentials.txt
 `
-
-### Starting systemctl services
-
-Bluetooth
-```
-sudo systemctl enable bluetooth.service 
-sudo systemctl start bluetooth.service
-```

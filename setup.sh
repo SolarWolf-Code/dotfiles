@@ -44,5 +44,11 @@ ln -s "~/dotfiles/.gtkrc-2.0" ~/
 # mask xdg-desktop-portal - otherwise browser takes forever to open
 systemctl --user mask xdg-desktop-portal
 
+# bluetooth
+sudo systemctl enable bluetooth.service 
+sudo systemctl start bluetooth.service
+
 # refresh i3
 i3-msg restart
+
+

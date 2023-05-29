@@ -61,4 +61,13 @@ sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/wolf
 sudo chmod 644 /var/lib/AccountsService/icons/wolf
 touch /var/lib/AccountsService/users/wolf
 sudo cp ~/dotfiles/ASwolf /var/lib/AccountsService/users/wolf
-reboot
+
+# rebooting to change everything
+read -p "Would you like to reboot for changes to take effect? (Y/N): " answer
+
+if [[ $answer =~ ^[Yy]$ ]] || [[ -z $answer ]]; then
+  echo "Rebooting..."
+  reboot
+else
+  echo "Skipping reboot..."
+fi

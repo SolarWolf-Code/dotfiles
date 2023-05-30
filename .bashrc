@@ -20,8 +20,11 @@ eval "$(github-copilot-cli alias -- "$0")"
 alias wifi="bash /home/wolf/Desktop/wifimenu.txt"
 
 # alias for git clones
-alias gc="git clone"
-alias ga="git add"
+alias gcl="git clone"
+alias gadd="git add"
+alias gcm="git commit -m"
+alias gph="git push"
+
 
 # alias for micro (better nano)
 alias mc="micro"

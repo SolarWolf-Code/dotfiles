@@ -17,7 +17,7 @@ eval "$(starship init bash)"
 eval "$(github-copilot-cli alias -- "$0")"
 
 # WiFi selector
-alias wifi="bash /home/wolf/Desktop/wifimenu.txt"
+alias wifi="bash $HOME/dotfiles/wifimenu.txt"
 
 # alias for git clones
 alias gcl="git clone"

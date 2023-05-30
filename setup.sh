@@ -57,9 +57,9 @@ sudo cp ~/dotfiles/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-gre
 sudo cp ~/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
 
 # changing user avatar
-sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/wolf
-sudo chmod 644 /var/lib/AccountsService/icons/wolf
-sudo cp ~/dotfiles/ASwolf /var/lib/AccountsService/users/wolf
+sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/$USER
+sudo chmod 644 /var/lib/AccountsService/icons/$USER
+sudo cp ~/dotfiles/ASuser /var/lib/AccountsService/users/$USER
 
 # rebooting to change everything
 read -p "Would you like to reboot for changes to take effect? (Y/N): " answer

@@ -19,9 +19,8 @@ eval "$(github-copilot-cli alias -- "$0")"
 # WiFi selector
 alias wifi="bash /home/wolf/Desktop/wifimenu.txt"
 
-# alias for git clones (using key for private repos)
-source github_token
-alias gc='function _gc(){ url=$(echo $1 | sed "s/https:\/\///"); git clone "https://$GITHUB_TOKEN@$url"; };_gc'
+# alias for git clones
+alias gc="git clone"
 
 # alias for micro (better nano)
 alias mc="micro"

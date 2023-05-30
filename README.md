@@ -13,9 +13,8 @@ Clone this repo:
 ```
 
 ### Setting up Github token
-Obtain GH token from the website and put in this file
 `
-cd && mc github_token
+gh auth login
 `
 
 ### Create file for vpn credentials

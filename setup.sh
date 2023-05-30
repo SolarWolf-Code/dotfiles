@@ -20,9 +20,14 @@ echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
 cd
 mv ~/.config/.bashrc ~/.bashrc
 
-# moving openvpn file to correct folder
+# moving openvpn file to correct folder and start the service
 cd
-sudo mv ~/.config/us-slc.prod.surfshark.com_udp.ovpn /etc/openvpn/
+sed -i '/^auth-user-pass/c\auth-user-pass '"$HOME"'/ovpn/credentials.txt' ~/dotfiles/us-slc.prod.surfshark.com_udp.ovpn
+
+replace_string="/usr/bin/openvpn $HOME/dotfiles/us-slc.prod.surfshark.com_udp.ovpn"
+sed -i "s/^ExecStart=.*/ExecStart=$(echo $replace_string | sed 's/\//\\\//g')/" ~/dotfiles/openvpn.service
+sudo ln -s ~/dotfiles/openvpn.service /etc/systemd/system/openvpn.service
+sudo systemctl enable openvpn.service
 
 # install yay
 cd
@@ -60,6 +65,9 @@ sudo cp ~/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/$USER
 sudo chmod 644 /var/lib/AccountsService/icons/$USER
 sudo cp ~/dotfiles/ASuser /var/lib/AccountsService/users/$USER
+
+# start openvpn service
+sudo systemctl start openvpn.service
 
 # rebooting to change everything
 read -p "Would you like to reboot for changes to take effect? (Y/N): " answer

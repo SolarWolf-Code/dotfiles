@@ -1,0 +1,9 @@
+[Unit]
+Description=OpenVPN
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/openvpn /home/wolf/dotfiles/us-slc.prod.surfshark.com_udp.ovpn
+
+[Install]
+WantedBy=multi-user.target

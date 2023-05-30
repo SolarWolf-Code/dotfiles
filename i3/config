@@ -287,6 +287,3 @@ workspace $ws3 output none
 # Ruskdesk
 assign [class="Rustdesk"] $ws3
 exec --no-startup-id rustdesk
-
-# OpenVPN
-exec --no-startup-id sudo openvpn /etc/openvpn/us-slc.prod.surfshark.com_udp.ovpn # requires openvpn to be added to sudoers

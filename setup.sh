@@ -69,6 +69,10 @@ sudo cp ~/dotfiles/ASuser /var/lib/AccountsService/users/$USER
 # start openvpn service
 sudo systemctl start openvpn.service
 
+# start for wifi
+sudo systemctl start NetworkManager
+sudo systemctl enable NetworkManager
+
 # rebooting to change everything
 read -p "Would you like to reboot for changes to take effect? (Y/N): " answer
 

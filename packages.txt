@@ -39,6 +39,7 @@ ttf-firacode-nerd
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+networkmanager
 notification-daemon
 openvpn
 magic-wormhole

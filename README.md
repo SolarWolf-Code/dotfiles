@@ -23,7 +23,7 @@ Obtain Surfshark token from the website and put in this file
 `
 cd && mkdir ovpn && mc ~/ovpn/credentials.txt
 `
-TODO:
+### TODO:
 - use hostname instead of "wolf"
 - update to include multilib in pacman.conf
 - fix openvpn. use a service instead

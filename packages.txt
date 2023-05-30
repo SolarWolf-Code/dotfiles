@@ -47,3 +47,4 @@ lightdm-webkit2-greeter
 pavucontrol
 obs-studio
 virt-manager
+github-cli

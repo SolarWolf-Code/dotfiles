@@ -21,6 +21,7 @@ alias wifi="bash /home/wolf/Desktop/wifimenu.txt"
 
 # alias for git clones
 alias gc="git clone"
+alias ga="git add"
 
 # alias for micro (better nano)
 alias mc="micro"

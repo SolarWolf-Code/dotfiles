@@ -73,6 +73,9 @@ sudo systemctl start openvpn.service
 sudo systemctl start NetworkManager
 sudo systemctl enable NetworkManager
 
+# for virt-manager
+sudo usermod -a -G libvirt wolf
+
 # rebooting to change everything
 read -p "Would you like to reboot for changes to take effect? (Y/N): " answer
 

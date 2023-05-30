@@ -49,4 +49,4 @@ pavucontrol
 obs-studio
 virt-manager
 github-cli
-qemu
+qemu-desktop

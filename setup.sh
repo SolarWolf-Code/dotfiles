@@ -59,7 +59,6 @@ sudo cp ~/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
 # changing user avatar
 sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/wolf
 sudo chmod 644 /var/lib/AccountsService/icons/wolf
-touch /var/lib/AccountsService/users/wolf
 sudo cp ~/dotfiles/ASwolf /var/lib/AccountsService/users/wolf
 
 # rebooting to change everything

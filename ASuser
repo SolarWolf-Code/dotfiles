@@ -1,5 +1,5 @@
 [User]
 Session=default
 XSession=i3
-Icon=/var/lib/AccountsService/icons/$USER
+Icon=/var/lib/AccountsService/icons/wolf
 SystemAccount=false

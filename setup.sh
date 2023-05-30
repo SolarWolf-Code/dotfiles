@@ -24,8 +24,8 @@ mv ~/.config/.bashrc ~/.bashrc
 cd
 sed -i '/^auth-user-pass/c\auth-user-pass '"$HOME"'/ovpn/credentials.txt' ~/dotfiles/us-slc.prod.surfshark.com_udp.ovpn
 
-replace_string="/usr/bin/openvpn $HOME/dotfiles/us-slc.prod.surfshark.com_udp.ovpn"
-sed -i "s/^ExecStart=.*/ExecStart=$(echo $replace_string | sed 's/\//\\\//g')/" ~/dotfiles/openvpn.service
+ovpn_string="/usr/bin/openvpn $HOME/dotfiles/us-slc.prod.surfshark.com_udp.ovpn"
+sed -i "s/^ExecStart=.*/ExecStart=$(echo $ovpn_string | sed 's/\//\\\//g')/" ~/dotfiles/openvpn.service
 sudo ln -s ~/dotfiles/openvpn.service /etc/systemd/system/openvpn.service
 sudo systemctl enable openvpn.service
 
@@ -64,6 +64,9 @@ sudo cp ~/dotfiles/lightdm.conf /etc/lightdm/lightdm.conf
 # changing user avatar
 sudo cp ~/dotfiles/avatar.jpg /var/lib/AccountsService/icons/$USER
 sudo chmod 644 /var/lib/AccountsService/icons/$USER
+
+AS_string="/var/lib/AccountsService/icons/$USER"
+sed -i "s/^Icon=.*/Icon=$(echo $AS_string | sed 's/\//\\\//g')/" ~/dotfiles/ASuser
 sudo cp ~/dotfiles/ASuser /var/lib/AccountsService/users/$USER
 
 # start openvpn service

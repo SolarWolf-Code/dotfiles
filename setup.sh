@@ -36,6 +36,10 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+# add multilib and sync
+sudo cp -f ~/dotfiles/pacman.conf /etc/pacman.conf
+sudo yay -Syy
+
 # install packages from package list
 cd
 yay -S --noconfirm - < ~/.config/packages.txt

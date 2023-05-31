@@ -15,6 +15,7 @@ Clone this repo:
 ### Setting up Github token
 `
 gh auth login
+git config --global credential.helper store
 `
 
 ### Create file for vpn credentials

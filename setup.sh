@@ -38,7 +38,7 @@ makepkg -si
 
 # add multilib and sync
 sudo cp -f ~/dotfiles/pacman.conf /etc/pacman.conf
-sudo yay -Syy
+sudo pacman -Syy
 
 # install packages from package list
 cd

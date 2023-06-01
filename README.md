@@ -23,5 +23,3 @@ Obtain Surfshark token from the website and put in this file
 `
 cd && mkdir ovpn && mc ~/ovpn/credentials.txt
 `
-### TODO:
-- update to include multilib in pacman.conf

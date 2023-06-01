@@ -1,5 +1,6 @@
 # dotfiles
 
+
 ## Fresh Install
 Install git from pacman
 `sudo pacman -S git`

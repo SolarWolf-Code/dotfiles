@@ -26,7 +26,7 @@ sed -i '/^auth-user-pass/c\auth-user-pass '"$HOME"'/ovpn/credentials.txt' ~/dotf
 
 ovpn_string="/usr/bin/openvpn $HOME/dotfiles/us-slc.prod.surfshark.com_udp.ovpn"
 sed -i "s/^ExecStart=.*/ExecStart=$(echo $ovpn_string | sed 's/\//\\\//g')/" ~/dotfiles/openvpn.service
-sudo ln -s ~/dotfiles/openvpn.service /etc/systemd/system/openvpn.service
+sudo cp  ~/dotfiles/openvpn.service /etc/systemd/system/openvpn.service
 sudo systemctl enable openvpn.service
 
 # install yay
